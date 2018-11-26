@@ -10,7 +10,7 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 ########################################################################
 
 ########################################################################
-# TODO: 2.
+# DONE: 2.
 #   You should have RUN the  m5e_loopy_turtles  module and READ its code.
 #   (Do so now if you have not already done so.)
 #
@@ -34,10 +34,15 @@ steve = rg.SimpleTurtle('circle')
 steve.pen = rg.Pen('green', 10)
 steve.speed = 20
 
-size = 150
-for k in range(6):
+radius = 150
 
-steve.forward(200)
-steve.left(120)
-steve.forward(200)
+for k in range(100):
 
+    steve.draw_circle(radius)
+
+    steve.forward(200)
+    steve.left(120)
+    steve.forward(k)
+
+    steve.pen_down()
+    radius = radius - 12
