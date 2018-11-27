@@ -44,8 +44,25 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 #
 ########################################################################
 import rosegraphics as rg
+
 window = rg.TurtleWindow()
+
 dan = rg.SimpleTurtle('turtle')
 dan.pen = rg.Pen('blue', 10)
-dan.speed = 20
-dan.forward(50)
+dan.speed = 1
+dan.left(90)
+dan.forward(200)
+
+dan.pen_up()
+dan.right(90)
+dan.forward(100)
+
+dan.right(90)
+dan.forward(240)
+
+dan.pen_down()
+
+dan.pen = rg.Pen('green', 10)
+dan.forward(150)
+
+window.close_on_mouse_click()
