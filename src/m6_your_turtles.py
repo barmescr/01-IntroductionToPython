@@ -29,14 +29,15 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 #
 ########################################################################
 import rosegraphics as rg
+
 window = rg.TurtleWindow()
 steve = rg.SimpleTurtle('circle')
-steve.pen = rg.Pen('green', 10)
+steve.pen = rg.Pen('blue', 10)
 steve.speed = 20
 
 radius = 150
 
-for k in range(5):
+for k in range(6):
 
     steve.draw_circle(radius)
 
@@ -46,3 +47,5 @@ for k in range(5):
 
     steve.pen_down()
     radius = radius - 12
+
+window.close_on_mouse_click()
