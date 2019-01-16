@@ -14,6 +14,18 @@
 ###############################################################################
 print('Hello, World')
 
+seq = [3,6,1,4,9,5]
+
+total = 0
+for k in range(len(seq) // 2):
+    total = total + seq[1 + (2 * k)]
+print(total)
+
+total = 0
+for k in range(1, len(seq), 2):
+    total = total + seq[k]
+print(total)
+
 ###############################################################################
 #
 # DONE: 1.
